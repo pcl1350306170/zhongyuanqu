@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大数据页面</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../Resources/js/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../Resources/js/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="./css/data.css"/>
+
+<script src="../Resources/js/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../Resources/js/echarts.js"></script>
+<script src="../Resources/js/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="../Resources/js/bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="./js/data.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/EchartsCreate.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/waveProgressBar.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div class="div-body">
+    <div class="title">
+        <img src="../Resources/images/navigationbj-title.png" alt="">
+    </div>
+    <div class="weather">
+        <span class="span-icon">
+            <img src="../Resources/images/icon/navigationbj-wea.png" alt="">
+        </span>
+        <span class="span-word">
+            32C-25C 空气质量优
+        </span>
+    </div>
+    <div class="time">
+        <span class="span-icon">
+            <img src="../Resources/images/icon/navigationbj-time.png" alt="">
+        </span>
+        <span class="span-word" id="datedom">
+            2019-06-07 20:15:85 星期八
+        </span>
+    </div>
+
+    <div class="nrdom">
+        <div class="nr-y-1 nr-y">
+            <!--实有人口分析===START-->
+            <div class="nr-y-1-x nr-y-1-x-1">
+                <div class="x-title">实有人口分析</div>
+                <div class="x-echarts" id="echart_demographicAnalysis"></div>
+                <div class="x-1-legend">
+                    <div class="bar-label">
+                        <span class="k k-1"></span>
+                        <span class="n">总数</span>
+                    </div>
+                    <div class="bar-label">
+                        <span class="k k-2"></span>
+                        <span class="n">户籍人口</span>
+                    </div>
+                    <div class="bar-label">
+                        <span class="k k-3"></span>
+                        <span class="n">流动人口</span>
+                    </div>
+                    <div class="bar-label">
+                        <span class="k k-4"></span>
+                        <span class="n">留守人口</span>
+                    </div>
+                </div>
+            </div>
+            <!--实有人口分析===END-->
+            <!--重点青少年===START-->
+            <div class="nr-y-1-x nr-y-1-x-2">
+                <div class="x-title">重点青少年</div>
+                <div class="x-echarts">
+                    <div class="x2-e">
+                        <div class="x2-e-title">重点青少年</div>
+                        <div class="x2-e-yuan">300</div>
+                    </div>
+                    <div class="x2-e">
+                        <div class="x2-e-title">男性占比</div>
+                        <div class="x2-e-yuan">170</div>
+                    </div>
+                    <div class="x2-e">
+                        <div class="x2-e-title">女性占比</div>
+                        <div class="x2-e-yuan">130</div>
+                    </div>
+                </div>
+            </div>
+            <!--重点青少年===END-->
+            <!--特殊人群===START-->
+            <div class="nr-y-1-x nr-y-1-x-3">
+                <div class="x-title">特殊人群</div>
+                <div class="x-echarts"></div>
+            </div>
+            <!--特殊人群===END-->
+        </div>
+        <div class="nr-y-2 nr-y">
+            <div class="nr-y-2-x nr-y-2-x-1">地图</div>
+            <!--党建统计===START-->
+            <div class="nr-y-2-x nr-y-2-x-2">
+                <div class="x-title">党建统计</div>
+                <div class="x-echarts">
+                    <div class="y2x2-jd">
+                        <div class="y2x2-jdt">
+                            <canvas id="partyStatistics_1"></canvas>
+                        </div>
+                        <div class="y2x2-name">正式党员数</div>
+                    </div>
+                    <div class="y2x2-jd">
+                        <div class="y2x2-jdt">
+                            <canvas id="partyStatistics_2"></canvas>
+                        </div>
+                        <div class="y2x2-name">预备党员数</div>
+                    </div>
+                </div>
+            </div>
+            <!--党建统计===END-->
+            <!--乡镇、街道绩效考核排名 === START-->
+            <div class="nr-y-2-x nr-y-2-x-3">
+                <div class="x-title">乡镇、街道绩效考核排名</div>
+                <div class="x-echarts"></div>
+            </div>
+            <!--乡镇、街道绩效考核排名 === END-->
+        </div>
+        <div class="nr-y-3 nr-y">
+            <!--事件月度变化情况===START-->
+            <div class="nr-y-3-x nr-y-3-x-1">
+                <div class="x-title">事件月度变化情况</div>
+                <div class="x-echarts" id="echart_MonthlyvariationOfEvents"></div>
+            </div>
+            <!--事件月度变化情况===END-->
+            <!--事件分类统计 == START-->
+            <div class="nr-y-3-x nr-y-3-x-2">
+                <div class="x-title">事件分类统计</div>
+                <div class="x-echarts" id="echart_EventClassificationStatistics"></div>
+            </div>
+            <!--事件分类统计 == END-->
+            <!--事件区域统计 === START-->
+            <div class="nr-y-3-x nr-y-3-x-3">
+                <div class="x-title">事件区域统计</div>
+                <div class="x-echarts" id="echart_EventAreaStatistics"></div>
+            </div>
+            <!--事件区域统计 === END-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

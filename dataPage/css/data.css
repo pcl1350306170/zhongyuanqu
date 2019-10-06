@@ -1,0 +1,351 @@
+/*导航页样式*/
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url("../Images/bj.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.div-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*标题样式=====START*/
+.div-body .title {
+    width: 28%;
+    height: 8%;
+    position: absolute;
+    top: 4%;
+    left: 36%;
+}
+
+.div-body .title img {
+    width: 100%;
+}
+
+/*标题样式=====END*/
+/*天气====SATRT*/
+.div-body .weather {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 15%;
+    height: 43px;
+}
+
+.div-body .weather span, .div-body .time span {
+    position: absolute;
+    display: inline-block;
+    height: 43px;
+}
+
+.div-body .weather .span-icon, .div-body .time .span-icon {
+    width: 43px;
+}
+
+.div-body .weather .span-icon img, .div-body .time .span-icon img {
+    width: 43px;
+}
+
+.div-body .weather .span-word, .div-body .time .span-word {
+    line-height: 43px;
+    left: 45px;
+    color: #1cc5f6;
+}
+
+/*天气====END*/
+/*时间====START*/
+.div-body .time {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    width: 18%;
+    height: 43px;
+}
+
+/*时间====END*/
+/*中间内容模块=====START*/
+.div-body .nrdom{
+    width: 100%;
+    height: 88.5%;
+    position: absolute;
+    top:11.5%;
+    left:0%;
+}
+
+.div-body .nrdom .nr-y{
+    height: 100%;
+    position: absolute;
+    top:0;
+}
+
+/*左数-列-1 ====== START*/
+.div-body .nrdom .nr-y-1{
+    width: 25%;
+    left: 0;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x{
+    width: 95%;
+    height: 33.33%;
+    position:absolute;
+    left: 5%;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x .x-title, .div-body .nrdom .nr-y-3 .nr-y-3-x .x-title, .div-body .nrdom .nr-y-2 .nr-y-2-x .x-title{
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    color:#ffffff;
+    font-size: 1.8vh;
+    text-align: center;
+    line-height: 5vh;
+    background-image: url("../Images/title-bottom.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x .x-echarts, .div-body .nrdom .nr-y-3 .nr-y-3-x .x-echarts, .div-body .nrdom .nr-y-2 .nr-y-2-x .x-echarts{
+    width: 90%;
+    height: calc(100% - 5vh);
+    position: absolute;
+    top: 5vh;
+    left:5%;
+}
+
+    /*实有人口分析*/
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1{
+    top:0
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-echarts{
+    width: 80%;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend{
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend .bar-label{
+    width: 100%;
+    height: 3vh;
+    line-height: 3vh;
+    white-space: nowrap;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend .bar-label span{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.3vh;
+}
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend .bar-label .k{
+    width: 1.3vh;
+    height: 1.3vh;
+    margin-right: 0.5vh;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend .bar-label .k-1{
+    background: #06fffc;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend .bar-label .k-2 {
+    background: #ffa303;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend .bar-label .k-3 {
+    background: #01bf3f;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-1 .x-1-legend .bar-label .k-4 {
+    background: #00a0e9;
+}
+
+/*重点青少年*/
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 {
+    top: 33.33%
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e{
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    top:5%;
+    left: 0;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e .x2-e-title{
+    color:#0aebf3;
+    width: 100%;
+    height: 3vh;
+    line-height: 3vh;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    font-size: 1.6vh;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e .x2-e-yuan{
+    width: 11vh;
+    height: 11vh;
+    position: absolute;
+    top:6vh;
+    left:calc((100% - 11vh) /2);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 11vh;
+    font-size: 3.5vh;
+    font-weight: bolder;
+    padding-right: 0.4vh;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e:nth-child(1) .x2-e-yuan{
+    background-image: url("../Images/x2-e-yuan-1.png");
+    color: #05fffc;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e:nth-child(2) .x2-e-yuan {
+    background-image: url("../Images/x2-e-yuan-2.png");
+    color: #07ff31;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e:nth-child(3) .x2-e-yuan {
+    background-image: url("../Images/x2-e-yuan-3.png");
+    color:#ffa301;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e:nth-child(2){
+    left: 33.33%;
+}
+
+.div-body .nrdom .nr-y-1 .nr-y-1-x-2 .x-echarts .x2-e:nth-child(3) {
+    left: 66.66%;
+}
+    /*特殊人群*/
+.div-body .nrdom .nr-y-1 .nr-y-1-x-3 {
+    top: 66.66%
+}
+/*左数-列-1 ====== END*/
+/*左数-列-2 ====== START*/
+.div-body .nrdom .nr-y-2 {
+    width: 50%;
+    left: 25%;
+}
+
+.div-body .nrdom .nr-y-2 .nr-y-2-x{
+    border: 1px solid #352bff;
+    width: 100%;
+    position: absolute;
+}
+
+/*地图*/
+.div-body .nrdom .nr-y-2 .nr-y-2-x-1{
+    height: 66.66%;
+    left: 0;
+    top:0;
+}
+/*党建统计*/
+.div-body .nrdom .nr-y-2 .nr-y-2-x-2{
+    width: 50%;
+    height: 33.33%;
+    left: 0;
+    top:66.66%;
+}
+
+.div-body .nrdom .nr-y-2 .nr-y-2-x-2 .x-echarts .y2x2-jd{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.div-body .nrdom .nr-y-2 .nr-y-2-x-2 .x-echarts .y2x2-jd:nth-child(2){
+    left: 50%;
+}
+
+.div-body .nrdom .nr-y-2 .nr-y-2-x-2 .x-echarts .y2x2-jd .y2x2-jdt{
+    position: absolute;
+    width: 15vh;
+    height:15vh;
+    line-height: 15vh;
+    top:1.5vh;
+    left: calc((100% - 15vh)/2);
+
+}
+
+.div-body .nrdom .nr-y-2 .nr-y-2-x-2 .x-echarts .y2x2-jd .y2x2-jdt canvas{
+    background-image: url("../Images/jdt.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: -7%;
+}
+
+.div-body .nrdom .nr-y-2 .nr-y-2-x-2 .x-echarts .y2x2-jd .y2x2-name {
+    width: 100%;
+    height: 3vh;
+    text-align: center;
+    color:#85e2f4;
+    position: absolute;
+    left: 0;
+    top:20vh
+}
+/*乡镇街道绩效考核排名*/
+.div-body .nrdom .nr-y-2 .nr-y-2-x-3 {
+    width: 50%;
+    height: 33.33%;
+    left: 50%;
+    top: 66.66%;
+}
+
+.div-body .nrdom .nr-y-2 .nr-y-2-x-3 .x-echarts{
+    background-image: url("../Images/tablebj.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+    /*左数-列-2 ====== END*/
+/*左数-列-3 ====== START*/
+.div-body .nrdom .nr-y-3 {
+    width: 25%;
+    left: 75%;
+}
+
+.div-body .nrdom .nr-y-3 .nr-y-3-x {
+    width: 100%;
+    height: 33.33%;
+    position: absolute;
+    left: 0;
+}
+
+/*事件月度变化情况*/
+.div-body .nrdom .nr-y-3 .nr-y-3-x-1 {
+    top: 0
+}
+
+/*事件分类统计*/
+.div-body .nrdom .nr-y-3 .nr-y-3-x-2 {
+    top: 33.33%
+}
+
+/*事件区域统计*/
+.div-body .nrdom .nr-y-3 .nr-y-3-x-3 {
+    top: 66.66%
+}
+/*左数-列-3 ====== END*/
+/*中间内容模块=====END*/
