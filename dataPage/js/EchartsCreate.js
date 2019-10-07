@@ -9,6 +9,13 @@ var EchartsCreate = {
     name: [1,2,3,4,5,6,7,8,9,10,11,12],
     value:[]
   },
+  // 数据 - 特殊人群
+  data_SpecialPopulations:[
+    {value: 353, name: '刑满释放人员'},
+    {value: 153, name: '社区矫正人员'},
+    {value: 663, name: '肇事肇祸等'},
+    {value: 163, name: '严重精神障碍患者'}
+  ],
   init () {
     const _this = this
 
@@ -16,9 +23,12 @@ var EchartsCreate = {
     _this.createEchart_MonthlyvariationOfEvents() //事件月度变化情况
     _this.createEchart_EventClassificationStatistics() // 事件分类统计
     _this.createEchart_EventAreaStatistics() // 事件区域统计
+    _this.createEchart_SpecialPopulations() // 特殊人群
 
     // 党建统计的进度条
     _this.create_partyStatistics()
+    //乡镇、街道绩效考核排名===滚动
+    _this.run_TownshipStreet()
   },
   // 创建图表 - 实有人口分析
   createEchart_demographicAnalysis () {
@@ -207,9 +217,9 @@ var EchartsCreate = {
             x2: 0,
             y2: 1,
             colorStops: [{
-              offset: 0, color: 'rgba(34,145,27,0.3)' // 0% 处的颜色
+              offset: 0, color: 'rgba(34,145,227,0.1)' // 0% 处的颜色
             }, {
-              offset: 1, color: 'rgba(34,145,27,0.3)' // 100% 处的颜色
+              offset: 1, color: 'rgba(34,145,227,0.3)' // 100% 处的颜色
             }]
           }
         },
@@ -244,9 +254,9 @@ var EchartsCreate = {
               x2: 0,
               y2: 1,
               colorStops: [{
-                offset: 0, color: 'rgba(34,145,27,0.3)' // 0% 处的颜色
+                offset: 0, color: 'rgba(34,145,227,0.3)' // 0% 处的颜色
               }, {
-                offset: 1, color: 'rgba(34,145,27,0.3)' // 100% 处的颜色
+                offset: 1, color: 'rgba(34,145,227,0.3)' // 100% 处的颜色
               }]
             }
           },
@@ -437,6 +447,91 @@ var EchartsCreate = {
     }
     classifyCharts.setOption(classifyOption)
   },
+  // 创建图表 - 特殊人群
+  createEchart_SpecialPopulations () {
+    const _this = this
+    let slabelLine = {
+      normal: {
+        show: false
+      },
+      emphasis: {
+        show: false
+      }
+    }
+    let opChart = echarts.init(document.getElementById('echart_SpecialPopulations'))
+
+    let chartOption = {
+      legend: {
+        show:false,
+        data: ['刑满释放人员', '社区矫正人员', '肇事肇祸等','严重精神障碍患者'],
+        textStyle: {
+          color: '#dde6ef',
+          fontSize: 13
+        },
+        orient: 'vertical',
+        top: 10,
+        left: 0,
+        right: 0,
+        bottom: 40,
+        itemWidth: 15,
+        itemHeight: 15,
+        padding: 25
+      },
+      series: [
+        {
+          name: '特殊人群',
+          type: 'pie',
+          radius: ['0%', '85%'],
+          center: ['50%', '50%'],
+          roseType: false,
+          avoidLabelOverlap: false,
+          selectedMode: 'single',
+          label: {
+            normal: {
+              formatter: '{a|{b} }\n{b|{c}}',
+              show: true,
+              position: 'outside',
+              rich: {
+                a: {
+                  color: '#c2c6bf',
+                  fontSize: 12,
+                  lineHeight: 33
+                },
+                b: {
+                  color: '#00B8FF',
+                  lineHeight: 2,
+                  fontSize: 18,
+                  fontWeight: 'bold',
+                  align: 'center'
+                }
+              }
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                fontSize: 35,
+                fontWeight: 'bold'
+              }
+            }
+          },
+          labelLine: slabelLine,
+          data: _this.data_SpecialPopulations,
+          itemStyle: {
+            normal: {
+              color: function (params) {
+                // 自定义颜色
+                var colorList = [
+                  '#33e8d1', '#a20b13', '#2b6df8','#c15935'
+                ]
+                return colorList[params.dataIndex]
+              }
+            }
+          }
+        }
+      ]
+    }
+    opChart.setOption(chartOption)
+  },
   // 党建统计的进度条
   create_partyStatistics() {
     let j1 = {
@@ -451,5 +546,11 @@ var EchartsCreate = {
     }
     waveProgressBar.init(j2)
 
+  },
+  //乡镇、街道绩效考核排名
+  run_TownshipStreet(){
+    $('.ul-TownshipStreet').liMarquee({
+      direction: 'up'
+    })
   }
 }

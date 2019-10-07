@@ -91,7 +91,7 @@ var waveProgressBar = {
       var size = 0.4 * cR;
       ctx.font = size + 'px Microsoft Yahei';
       ctx.textAlign = 'center';
-      ctx.fillStyle = "rgba(134, 228, 245, 0.8)";
+      ctx.fillStyle = "rgba(134, 228, 245, 1)";
       ctx.fillText(~~nowRange + '%', r, r + size / 2);
 
       ctx.restore();

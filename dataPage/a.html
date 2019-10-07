@@ -2,14 +2,60 @@
 <head>
     <meta charset="UTF-8"/>
     <title>饼图</title>
+    <link rel="stylesheet" type="text/css" href="../Resources/js/liMarquee/liMarquee.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/data.css"/>
+
+    <script src="../Resources/js/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../Resources/js/liMarquee/jquery.liMarquee.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
     <script src="https://cdn.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
 </head>
 <body>
 <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+<div class="ul-TownshipStreet" style="position: absolute;
+    width: 100%;
+    height: 15vh;
+    top: 28%;">
+    <ul>
+        <li>
+            <span>TOP1</span>
+            <span>乡镇1</span>
+            <span>92</span>
+        </li>
+        <li>
+            <span>TOP2</span>
+            <span>乡镇2</span>
+            <span>88</span>
+        </li>
+        <li>
+            <span>TOP3</span>
+            <span>乡镇3</span>
+            <span>78</span>
+        </li>
+        <li>
+            <span>TOP4</span>
+            <span>乡镇4</span>
+            <span>74</span>
+        </li>
+        <li>
+            <span>TOP5</span>
+            <span>乡镇5</span>
+            <span>92</span>
+        </li>
+        <li>
+            <span>TOP6</span>
+            <span>乡镇6</span>
+            <span>92</span>
+        </li>
+    </ul>
+</div>
 <script type="text/javaScript">
-
+$(function(){
+  $('.ul-TownshipStreet').liMarquee({
+    direction: 'up'
+  })
+})
   var pieColors = (function () {     // 此处是基础着色，如果设置好颜色，此处就没有看的必要了
     var colors = [],
       base = Highcharts.getOptions().colors[0],
