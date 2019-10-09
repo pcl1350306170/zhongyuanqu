@@ -1,4 +1,5 @@
 $(function(){
+  dealcodea();
   // 验证码
   $("#loginkeyVal").blur(function () {
     let v = $(this).val();
@@ -47,4 +48,24 @@ function ckeckLogin(){
 
     }
   });
+}
+
+function dealcodea() {
+
+  for (let i = 0; i < 30; i++) {
+    let sjs = GetRandomNum(-80, 180)
+    let sjs2 = GetRandomNum(1, 10)
+    let h = `<div class="dom-sourcecode" style="right: ${i * 30}px;top: ${sjs}px;height: ${400 + sjs}px">
+                    <div class="sourcecode" style="opacity:${sjs2 * 0.1};">
+                        1010111001101011100110110111001100101011010100010101010110001101101010101110011010111001101101110011001010110101
+                    </div>
+              </div>`
+    $("body").append(h)
+  }
+}
+
+function GetRandomNum(Min, Max) {
+  var Range = Max - Min;
+  var Rand = Math.random();
+  return (Min + Math.round(Rand * Range));
 }

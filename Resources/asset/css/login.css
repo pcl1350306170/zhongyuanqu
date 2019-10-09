@@ -4,7 +4,7 @@ body,html{
     overflow: hidden;
 }
 body{
-    background-image: url("../../images/loginbj.jpg");
+    background-image: url("../../images/loginbj2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -171,4 +171,38 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 input {
     background-color: transparent;
+}
+
+/*右上角的源代码样式*/
+.dom-sourcecode {
+    position: absolute;
+    width: 10px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.sourcecode {
+    position: absolute;
+    width: 10px;
+    height: auto;
+    word-wrap: break-word;
+    color: rgba(112,158,255,0.6);
+    animation: dropdown 10s linear infinite;
+}
+
+.dom-sourcecode:nth-child(3n+1) .sourcecode {
+    animation: dropdown 15s linear infinite;
+}
+
+.dom-sourcecode:nth-child(4n+1) .sourcecode {
+    animation: dropdown 5s linear infinite;
+}
+
+@keyframes dropdown {
+    0% {
+        margin-top: -800px;
+    }
+    100% {
+        margin-top: -8px;
+    }
 }
