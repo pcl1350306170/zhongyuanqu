@@ -52,5 +52,106 @@ body,html{
 .mainpage-top .layui-nav-bar{
     display: none !important;
 }
+.useraction{
+    bottom: 2vh;
+    top:5vh;
+}
 
+.useraction li{
+    line-height: 6vh !important;
+    margin-right: 1.5vh;
+}
+
+.useraction .layui-nav-bar{
+    display: none;
+}
 /*头部样式 ============ END*/
+/*左侧菜单树====START*/
+.main-main .layui-side{
+    width: 12%;
+}
+
+.left-menu{
+    top:10.4% !important;
+    height: 89.6%;
+    background-color: #f5faff !important;
+    border-right: 1px solid #62f5f7;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+.left-menu .layui-nav-tree, .left-menu .layui-side-scroll{
+    width: 100%;
+}
+
+.left-menu .layui-nav {
+    background-color: #f5faff !important;
+    color:#333333;
+}
+
+.left-menu .layui-nav-tree .layui-nav-item a{
+    color: #333333;
+}
+.left-menu .layui-nav-tree .layui-nav-item a:hover {
+    background-color: #13bdf2;
+}
+
+.left-menu .layui-nav-itemed{
+    background-color: #13bdf2;
+}
+
+.left-menu .layui-nav-itemed .layui-nav-child{
+    background-color: #f5faff !important;
+}
+
+.left-menu .layui-nav-itemed .layui-nav-child a{
+    padding-left: 30px;
+    color: #333333;
+}
+
+.left-menu .layui-nav .layui-nav-more{
+    border-top-color:#333333;
+}
+
+.left-menu .layui-nav .layui-nav-mored, .left-menu .layui-nav-itemed > a .layui-nav-more{
+    margin-top: -9px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #333333;
+}
+
+.left-menu .layui-nav-bar{
+    display: none;
+}
+.menu-show-hide{
+    position: fixed;
+    left: 12%;
+    top: 50%;
+    width: 2vh;
+    height: 6vh;
+    border: 1px solid #40ddf5;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    line-height: 6vh;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+}
+
+
+.menu-show-hide img{
+    width: 70%;
+}
+/*左侧菜单树====END*/
+/*主体内容===START*/
+.main-centers{
+    height: 89.6%;
+}
+
+.main-main .layui-body{
+    top:10.4%;
+    width: 88%;
+    transition: all 1s ease-in-out;
+    z-index: 9;
+    left: 12%;
+}
+/*主体内容===END*/

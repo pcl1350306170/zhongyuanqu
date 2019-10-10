@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-<div class="layui-layout layui-layout-admin">
+<div class="layui-layout layui-layout-admin main-main">
   <div class="layui-header header">
     <!-- 头部区域（可配合layui已有的水平导航） -->
     <ul class="layui-nav layui-layout-left mainpage-top">
@@ -62,69 +62,63 @@
       </li>
     </ul>
 
-    <ul class="layui-nav layui-layout-right">
+    <ul class="layui-nav layui-layout-right useraction">
       <li class="layui-nav-item">
-        <a href="javascript:;">
-          <img src="Resources/img/admin.jpg" class="layui-nav-img">
-          admin
-        </a>
-        <dl class="layui-nav-child">
-          <dd><a href="javascript:;" _href="member_show.html"><cite>基本资料</cite></a></dd>
-          <dd><a href="javascript:;" _href="sys_set.html"><cite>安全设置</cite></a></dd>
-        </dl>
+        <span class="topicon">
+          <img src="./Resources/img/top-icon-user.png" alt="">
+        </span>
+        <span class="top-word">欢迎你，李四</span>
       </li>
-      <li class="layui-nav-item"><a href="../login.html">退出</a></li>
+      <li class="layui-nav-item">
+        <span class="topicon">
+          <img src="./Resources/img/top-icon-lock.png" alt="">
+        </span>
+        <span class="top-word">修改密码</span>
+      </li>
+      <li class="layui-nav-item">
+        <span class="topicon">
+          <img src="./Resources/img/top-icon-out.png" alt="">
+        </span>
+        <span class="top-word">退出</span>
+      </li>
     </ul>
   </div>
-  <div class="layui-side layui-bg-black x-side">
+  <div class="menu-show-hide" onclick="showOrhideMenu()">
+    <img src="./Resources/img/menu-hide.png" alt="">
+  </div>
+  <div class="layui-side layui-bg-black x-side left-menu">
     <div class="layui-side-scroll">
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
       <ul class="layui-nav layui-nav-tree" lay-filter="side">
         <li class="layui-nav-item">
-          <a class="" href="javascript:;">新闻管理</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;" _href="news_list.html"><cite>新闻列表</cite></a></dd>
-            <dd><a href="javascript:;" ><cite>删除新闻(待开发)</cite></a></dd>
-            <dd><a href="javascript:;" ><cite>新闻分类(待开发)</cite></a></dd>
-          </dl>
+          <a class="" href="javascript:;"><cite>新闻管理</cite></a>
         </li>
         <li class="layui-nav-item">
           <a class="" href="javascript:;">DIY管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;" >DIY列表(待开发)</a></dd>
-            <dd><a href="javascript:;" >删除DIY(待开发)</a></dd>
-            <dd><a href="javascript:;">DIY分类(待开发)</a></dd>
+            <dd><a href="javascript:;" ><cite>DIY列表(待开发)</cite></a></dd>
+            <dd><a href="javascript:;" ><cite>删除DIY(待开发)</cite></a></dd>
+            <dd><a href="javascript:;"><cite>DIY分类(待开发)</cite></a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
           <a class="" href="javascript:;">商品管理</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;" >商品列表(待开发)</a></dd>
-            <dd><a href="javascript:;" >删除商品(待开发)</a></dd>
-            <dd><a href="javascript:;" >商品分类(待开发)</a></dd>
+            <dd><a href="javascript:;" ><cite>商品列表(待开发)</cite></a></dd>
+            <dd><a href="javascript:;" ><cite>删除商品(待开发)</cite></a></dd>
+            <dd><a href="javascript:;" ><cite>商品分类(待开发)</cite></a></dd>
           </dl>
         </li>
-        <li class="layui-nav-item">
-          <a href="javascript:;">订单管理</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;" >订单列表(待开发)</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item">
-          <a href="javascript:;">轮播管理</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;" >轮播列表(待开发)</a></dd>
-          </dl>
-        </li>
+
         <li class="layui-nav-item">
             <a class="" href="javascript:;">会员管理</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;" >会员列表(待开发)</a></dd>
-              <dd><a href="javascript:;" >删除会员(待开发)</a></dd>
-              <dd><a href="javascript:;">等级管理(待开发)</a></dd>
-              <dd><a href="javascript:;" >积分管理(待开发)</a></dd>
-              <dd><a href="javascript:;" >浏览记录(待开发)</a></dd>
-              <dd><a href="javascript:;" >分享记录(待开发)</a></dd>
+              <dd><a href="javascript:;" ><cite>会员列表(待开发)</cite></a></dd>
+              <dd><a href="javascript:;" ><cite>删除会员(待开发)</cite></a></dd>
+              <dd><a href="javascript:;"><cite>等级管理(待开发)</cite></a></dd>
+              <dd><a href="javascript:;" ><cite>积分管理(待开发)</cite></a></dd>
+              <dd><a href="javascript:;" ><cite>浏览记录(待开发)</cite></a></dd>
+              <dd><a href="javascript:;" ><cite>分享记录(待开发)</cite></a></dd>
             </dl>
         </li>
         <li class="layui-nav-item">
@@ -147,8 +141,6 @@
           <dl class="layui-nav-child">
             <dd><a href="javascript:;" _href="sys_set.html"><cite>系统设置</cite></a></dd>
             <dd><a href="javascript:;" _href="sys_shield.html"><cite>屏蔽词</cite></a></dd>
-            <dd><a href="javascript:;">系统日志</a></dd>
-            <dd><a href="javascript:;">友情链接</a></dd>
             <dd><a href="javascript:;" _href="sys_log.html"><cite>第三方登录</cite></a></dd>
           </dl>
         </li>
@@ -156,7 +148,7 @@
     </div>
   </div>
 
-  <div class="layui-body admin-content s-main">
+  <div class="layui-body admin-content s-main main-centers">
     <!-- 内容主体区域 -->
     <div class="layui-tab layui-tab-card site-demo-title" lay-filter="s-tab" lay-allowclose="true">
         <div class="x-slide_left"></div>
@@ -176,8 +168,10 @@
 
 
 </div>
+<script src="../Resources/js/jquery/jquery-3.2.1.min.js"></script>
 <script src="../Resources/js/layui/layui.all.js"></script>
 <script src="../Resources/asset/main/js/base.js"></script>
+<script src="./Resources/js/main.js"></script>
 
 </body>
 </html>
