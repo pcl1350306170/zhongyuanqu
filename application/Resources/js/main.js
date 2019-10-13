@@ -1,7 +1,35 @@
 $(()=>{
 
-
+  loadFirstMenu();
+  baseElement.init();
 })
+// 加载一级菜单
+function loadFirstMenu() {
+  layui.use('laytpl', function () {
+    laytpl = layui.laytpl;
+    var data = menulist;
+    var getTpl = document.getElementById('firstMenu_demo').innerHTML
+      , view = document.getElementById('firstMenu_View');
+    laytpl(getTpl).render(data, function (html) {
+      view.innerHTML = html;
+      $("#firstMenu_View").find(".layui-nav-item").eq(0).click();
+    });
+  });
+}
+// 点击一级菜单，加载二级菜单
+function firstMenuClick(index){
+  let menu = menulist[index]['children']
+  layui.use('laytpl', function () {
+    laytpl = layui.laytpl;
+    var data = menu;
+    var getTpl = document.getElementById('leftMenu_demo').innerHTML
+      , view = document.getElementById('leftMenu_View');
+    laytpl(getTpl).render(data, function (html) {
+      view.innerHTML = html;
+      baseElement.init('upnew');
+    });
+  });
+}
 //显示、隐藏左侧菜单
 function showOrhideMenu() {
   let w = $(".left-menu").width();

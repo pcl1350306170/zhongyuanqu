@@ -20,47 +20,11 @@
 </style>
 </head>
 <body>
+
 <div class="layui-layout layui-layout-admin main-main">
   <div class="layui-header header">
     <!-- 头部区域（可配合layui已有的水平导航） -->
-    <ul class="layui-nav layui-layout-left mainpage-top">
-      <li class="layui-nav-item">
-        <div class="layui-nav-item-img">
-          <img src="./Resources/img/menu-icon1.png" alt="">
-        </div>
-        <div class="layui-nav-item-name">网格地图</div>
-      </li>
-      <li class="layui-nav-item">
-        <div class="layui-nav-item-img">
-          <img src="./Resources/img/menu-icon2.png" alt="">
-        </div>
-        <div class="layui-nav-item-name">网格人员</div>
-      </li>
-      <li class="layui-nav-item">
-        <div class="layui-nav-item-img">
-          <img src="./Resources/img/menu-icon3.png" alt="">
-        </div>
-        <div class="layui-nav-item-name">社情民意</div>
-      </li>
-      <li class="layui-nav-item">
-        <div class="layui-nav-item-img">
-          <img src="./Resources/img/menu-icon4.png" alt="">
-        </div>
-        <div class="layui-nav-item-name">事件管理</div>
-      </li>
-      <li class="layui-nav-item">
-        <div class="layui-nav-item-img">
-          <img src="./Resources/img/menu-icon5.png" alt="">
-        </div>
-        <div class="layui-nav-item-name">任务管理</div>
-      </li>
-      <li class="layui-nav-item">
-        <div class="layui-nav-item-img">
-          <img src="./Resources/img/menu-icon6.png" alt="">
-        </div>
-        <div class="layui-nav-item-name">日志管理</div>
-      </li>
-    </ul>
+    <div id="firstMenu_View"></div>
 
     <ul class="layui-nav layui-layout-right useraction">
       <li class="layui-nav-item">
@@ -87,64 +51,8 @@
     <img src="./Resources/img/menu-hide.png" alt="">
   </div>
   <div class="layui-side layui-bg-black x-side left-menu">
-    <div class="layui-side-scroll">
+    <div class="layui-side-scroll" id="leftMenu_View">
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-      <ul class="layui-nav layui-nav-tree" lay-filter="side">
-        <li class="layui-nav-item">
-          <a class="" href="javascript:;"><cite>新闻管理</cite></a>
-        </li>
-        <li class="layui-nav-item">
-          <a class="" href="javascript:;">DIY管理</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;" ><cite>DIY列表(待开发)</cite></a></dd>
-            <dd><a href="javascript:;" ><cite>删除DIY(待开发)</cite></a></dd>
-            <dd><a href="javascript:;"><cite>DIY分类(待开发)</cite></a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item">
-          <a class="" href="javascript:;">商品管理</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;" ><cite>商品列表(待开发)</cite></a></dd>
-            <dd><a href="javascript:;" ><cite>删除商品(待开发)</cite></a></dd>
-            <dd><a href="javascript:;" ><cite>商品分类(待开发)</cite></a></dd>
-          </dl>
-        </li>
-
-        <li class="layui-nav-item">
-            <a class="" href="javascript:;">会员管理</a>
-            <dl class="layui-nav-child">
-              <dd><a href="javascript:;" ><cite>会员列表(待开发)</cite></a></dd>
-              <dd><a href="javascript:;" ><cite>删除会员(待开发)</cite></a></dd>
-              <dd><a href="javascript:;"><cite>等级管理(待开发)</cite></a></dd>
-              <dd><a href="javascript:;" ><cite>积分管理(待开发)</cite></a></dd>
-              <dd><a href="javascript:;" ><cite>浏览记录(待开发)</cite></a></dd>
-              <dd><a href="javascript:;" ><cite>分享记录(待开发)</cite></a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">管理员管理</a>
-            <dl class="layui-nav-child">
-              <dd><a href="javascript:;" >管理员列表(待开发)</a></dd>
-              <dd><a href="javascript:;">角色管理(待开发)</a></dd>
-              <dd><a href="javascript:;" _href="role_edit.html"><cite>权限管理</cite> </a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">评论管理</a>
-            <dl class="layui-nav-child">
-              <dd><a href="javascript:;">评论列表(待开发)</a></dd>
-              <dd><a href="javascript:;">意见反馈(待开发)</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-          <a href="javascript:;">系统设置</a>
-          <dl class="layui-nav-child">
-            <dd><a href="javascript:;" _href="sys_set.html"><cite>系统设置</cite></a></dd>
-            <dd><a href="javascript:;" _href="sys_shield.html"><cite>屏蔽词</cite></a></dd>
-            <dd><a href="javascript:;" _href="sys_log.html"><cite>第三方登录</cite></a></dd>
-          </dl>
-        </li>
-      </ul>
     </div>
   </div>
 
@@ -160,7 +68,7 @@
         </ul>
         <div class="layui-tab-content site-demo site-demo-body">
             <div class="layui-tab-item layui-show">
-                <iframe frameborder="0" src="./list.html" class="s-iframe"></iframe>
+                <iframe frameborder="0" src="http://localhost:8888/mine/html-css-1122/08-%e6%9c%80%e6%96%b0HTML5+CSS3+JavaScript%e5%ae%9e%e7%94%a8%e6%a1%88%e4%be%8b%e5%a4%a7%e5%85%a8%ef%bc%882181%e4%be%8b%ef%bc%89/3%e4%b8%aaHTML5%e7%bd%91%e9%a1%b5%e5%80%92%e8%ae%a1%e6%97%b6%e4%bb%a3%e7%a0%81%e7%89%b9%e6%95%88/" class="s-iframe"></iframe>
             </div>
         </div>
     </div>
@@ -169,9 +77,45 @@
 
 </div>
 <script src="../Resources/js/jquery/jquery-3.2.1.min.js"></script>
-<script src="../Resources/js/layui/layui.all.js"></script>
+<!--<script src="../Resources/js/layui/layui.all.js"></script>-->
+<script src="lib/layui.js"></script>
 <script src="../Resources/asset/main/js/base.js"></script>
 <script src="./Resources/js/main.js"></script>
+<script src="./Resources/js/menudata.js"></script>
 
+<!--一级菜单模板-->
+<script id="firstMenu_demo" type="text/html">
+  <ul class="layui-nav layui-layout-left mainpage-top">
+    {{# layui.each(d, function(index, item){ }}
+    <li class="layui-nav-item" onclick="firstMenuClick('{{index}}')">
+      <div class="layui-nav-item-img">
+        <img src="{{item.icon}}" alt="">
+      </div>
+      <div class="layui-nav-item-name">{{item.name}}</div>
+    </li>
+    {{# }); }}
+  </ul>
+</script>
+<!--加载左侧菜单模板-->
+<script id="leftMenu_demo" type="text/html">
+  <ul class="layui-nav layui-nav-tree" lay-filter="side">
+    {{# layui.each(d, function(index, item){ }}
+    <li class="layui-nav-item">
+      <a class="" href="javascript:;" _href="{{item['link']}}"><cite>{{item.name}}</cite></a>
+      {{# if(item.children){ }}
+        <dl class="layui-nav-child">
+          {{# for(let r in item.children){ console.log(item.children[r]) ;}}
+          <dd>
+            <a href="javascript:;" _href="{{item.children[r]['link']}}">
+              <cite>{{item.children[r]['name']}}</cite>
+            </a>
+          </dd>
+          {{# } }}
+        </dl>
+      {{# } }}
+    </li>
+    {{# }); }}
+  </ul>
+</script>
 </body>
 </html>
