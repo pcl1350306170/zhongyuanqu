@@ -17,9 +17,6 @@ var baseElement= {
 
       //监听导航点击
       element.on('nav', function (elem) {
-        $("#leftMenu_View").find(".layui-nav-item").each(function (){
-          // $(this).removeClass("layui-nav-itemed");
-        })
         title = elem.find('cite').text();
         if (title == '') return;
 

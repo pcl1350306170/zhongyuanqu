@@ -2,6 +2,8 @@ $(()=>{
 
   loadFirstMenu();
   baseElement.init();
+
+  refreshAction();
 })
 // 加载一级菜单
 function loadFirstMenu() {
@@ -63,4 +65,42 @@ function showOrhideMenu() {
     })
     $(".menu-show-hide img").attr("src", "./Resources/img/menu-hide.png");
   }
+}
+
+function showOrhideAction() {
+  $(".layui-nav-item-iframeAction-actiion").toggle(120);
+}
+function refreshAction(){
+  $(".layui-nav-item-iframeAction-actiion").find("li").click(function(){
+    let a = $(this).attr("data-target");
+    switch (a) {
+      case "refresh":
+        $(".layui-tab-title").find(".layui-this").each(function(){
+          let t = $(this).attr('lay-id');
+          let src = $(".layui-tab-content").find(".layui-tab-item").eq(t).find(".s-iframe").attr("src");
+          $(".layui-tab-content").find(".layui-tab-item").eq(t).find(".s-iframe").attr("src",src);
+        })
+        let src = $(".layui-tab-content").find(".layui-tab-item").eq(0).find(".s-iframe").attr("src");
+        $(".layui-tab-content").find(".layui-tab-item").eq(0).find(".s-iframe").attr("src", src);
+        break;
+      case "closeCurrent":
+
+        break;
+      case "closeOther":
+        $(".layui-tab-title").find("li").each(function () {
+          let t = $(this).hasClass('layui-this');
+          if(!t){
+            $(this).find(".layui-tab-close").click();
+          }
+          console.log(t);
+        })
+        break;
+      case "closeAll":
+        $(".layui-tab-title").find("li").each(function () {
+          $(this).find(".layui-tab-close").click();
+        })
+        break;
+    }
+    $(".layui-nav-item-iframeAction-actiion").hide(120);
+  })
 }

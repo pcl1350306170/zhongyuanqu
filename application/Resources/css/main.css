@@ -148,12 +148,12 @@ body,html{
     position: fixed;
     left: 12%;
     top: 50%;
-    width: 2vh;
-    height: 6vh;
+    width: 1.5vh;
+    height: 4vh;
     border: 1px solid #40ddf5;
     border-radius: 0 10px 10px 0;
-    text-align: center;
-    line-height: 6vh;
+    text-align: left;
+    line-height: 4vh;
     cursor: pointer;
     transition: all 1s ease-in-out;
     z-index: 10;
@@ -175,5 +175,51 @@ body,html{
     transition: all 1s ease-in-out;
     z-index: 9;
     left: 12%;
+}
+
+.main-centers .layui-nav-item-iframeAction{
+    width: 4vh;
+    height: 4vh;
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: 15;
+    border: 2px solid #f6f6f6;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main-centers .layui-nav-item-iframeAction-actiion{
+    width: 14vh;
+    position: absolute;
+    right: 0;
+    top: 4vh;
+    z-index: 15;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    transition: all 1s ease-in-out;
+    display: none;
+}
+
+.main-centers .layui-nav-item-iframeAction-actiion ul{
+    display: block;
+    list-style-type: disc;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.main-centers .layui-nav-item-iframeAction-actiion ul li:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.main-centers .layui-nav-item-iframeAction-actiion ul li.kit-item {
+    line-height: 35px;
+    cursor: pointer;
+    color: #393D49;
+}
+
+.main-centers .layui-nav-item-iframeAction-actiion .kit-line {
+    border-bottom: 1px solid #e2e2e2;
 }
 /*主体内容===END*/
