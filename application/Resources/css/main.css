@@ -25,7 +25,7 @@ body,html{
 }
 
 .mainpage-top{
-    margin-top: 1vh;
+    margin-top: 0.8vh;
 }
 .mainpage-top .layui-nav-item-name{
     line-height: 2.5vh;
@@ -34,6 +34,11 @@ body,html{
     width: 11vh;
     line-height: 6vh;
     text-align: center;
+    padding: 5px;
+}
+
+.mainpage-top .firstment-active{
+    background-color: rgba(0,0,0,0.2);
 }
 
 .mainpage-top .layui-nav-item-img{
@@ -89,15 +94,31 @@ body,html{
     color:#333333;
 }
 
+.left-menu .layui-nav-tree .layui-nav-item{
+    border-bottom: 1px solid #dae3ec;
+}
+
+.left-menu .layui-nav-tree .layui-nav-item .leftmenu-icon {
+   width: 2.5vh;
+    height: 2.5vh;
+}
 .left-menu .layui-nav-tree .layui-nav-item a{
     color: #333333;
 }
 .left-menu .layui-nav-tree .layui-nav-item a:hover {
-    background-color: #13bdf2;
+    background-image: linear-gradient(to top, #0db9f1, #6cfcf8);
+}
+
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover {
+    background-image: linear-gradient(to top, #0db9f1, #6cfcf8);
+}
+
+.layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover {
+    background-image: linear-gradient(to top, #0db9f1, #6cfcf8);
 }
 
 .left-menu .layui-nav-itemed{
-    background-color: #13bdf2;
+    background-image: linear-gradient(to top, #0bbdf1, #0f77fc);
 }
 
 .left-menu .layui-nav-itemed .layui-nav-child{
@@ -116,7 +137,8 @@ body,html{
 .left-menu .layui-nav .layui-nav-mored, .left-menu .layui-nav-itemed > a .layui-nav-more{
     margin-top: -9px;
     border-style: dashed dashed solid;
-    border-color: transparent transparent #333333;
+    border-color: transparent transparent #f9f3f3;
+
 }
 
 .left-menu .layui-nav-bar{

@@ -87,7 +87,7 @@
 <script id="firstMenu_demo" type="text/html">
   <ul class="layui-nav layui-layout-left mainpage-top">
     {{# layui.each(d, function(index, item){ }}
-    <li class="layui-nav-item" onclick="firstMenuClick('{{index}}')">
+    <li class="layui-nav-item" onclick="firstMenuClick('{{index}}',this)">
       <div class="layui-nav-item-img">
         <img src="{{item.icon}}" alt="">
       </div>
@@ -101,7 +101,9 @@
   <ul class="layui-nav layui-nav-tree" lay-filter="side">
     {{# layui.each(d, function(index, item){ }}
     <li class="layui-nav-item">
-      <a class="" href="javascript:;" _href="{{item['link']}}"><cite>{{item.name}}</cite></a>
+      <a class="" href="javascript:;" _href="{{item['link']}}">
+        <img src="{{item['icon']}}" alt="" class="leftmenu-icon">
+        <cite>{{item.name}}</cite></a>
       {{# if(item.children){ }}
         <dl class="layui-nav-child">
           {{# for(let r in item.children){ console.log(item.children[r]) ;}}

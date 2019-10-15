@@ -17,7 +17,10 @@ function loadFirstMenu() {
   });
 }
 // 点击一级菜单，加载二级菜单
-function firstMenuClick(index){
+function firstMenuClick(index,obj){
+  $(".firstment-active").removeClass("firstment-active");
+  $(obj).addClass('firstment-active');
+
   let menu = menulist[index]['children']
   layui.use('laytpl', function () {
     laytpl = layui.laytpl;
