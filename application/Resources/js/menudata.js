@@ -7,7 +7,7 @@ const menulist = {
       GridMap1:{
         name: '网格地图',
         icon: './Resources/img/menu-icon1.png',
-        link:''
+        link:'https://www.cnblogs.com/'
       },
       GridMap2: {
         name: '网格地图2',
