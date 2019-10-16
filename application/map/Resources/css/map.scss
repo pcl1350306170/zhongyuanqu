@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+body,html{
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/bj.jpg");
+  overflow: hidden;
+}
+// 地图周边样式
+.main-map{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  .div-1{
+    position: absolute;
+  }
+  /*顶部横条 ==== START*/
+  .map-top {
+    width: 55%;
+    height: 6vh;
+    border: 1px solid #0bb8f0;
+    background-color: #f5faff;
+    top: 0;
+    right: 0;
+    table{
+      width: 100%;
+      height: 6vh;
+      tr{
+        width: 100%;
+        height: 100%;
+        td{
+          white-space: nowrap;
+          width: 12.5%;
+          height: 100%;
+          text-align: center;
+          padding: 3px;
+          span{
+            padding: 0 1px;
+          }
+          .top-icon{
+            width: 3vh;
+            height: 3vh;
+          }
+          .top-wz{
+            font-size: 1.5vh;
+            position: relative;
+            top:2px;
+          }
+        }
+      }
+    }
+  }
+
+  /*顶部横条 ==== END*/
+  /*左侧菜单====START*/
+  .map-left {
+    top: 0;
+    left: 0;
+    width: 14%;
+    height: 100%;
+    background-color: #f5faff !important;
+    border-right: 1px solid #62f5f7;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .left-div{
+      width: 100%;
+      height: auto;
+      .left-title{
+        width: 100%;
+        height: 5vh;
+        line-height: 5vh;
+        text-align: center;
+        background-image: linear-gradient(to top, #0db9f1, #6cfcf8);
+        color:#203296;
+        font-size: 1.6vh;
+        .left-search-icon{
+          margin-right: 1vh;
+          img{
+            width: 3vh;
+          }
+        }
+
+        .left-updown-icon {
+          float: right;
+          margin-right: 10px;
+          cursor: pointer;
+          img {
+            width: 2vh;
+          }
+        }
+      }
+      .left-content{
+        .left-input {
+          width: 100%;
+          height: 5vh;
+          line-height: 5vh;
+          padding: 5px;
+          input{
+            width: 92%;
+            height: 3.8vh;
+            margin: 0 auto;
+            background-color: #e8f0f5;
+            border: 1px solid #acbbc4;
+            padding-left: 3px;
+          }
+          .input-icon{
+            width: 3.2vh;
+            height: 3.2vh;
+            position: relative;
+            top: -5.2vh;
+            font-size: 1.5vh;
+            left: 83%;
+          }
+        }
+        .gongge-table{
+
+          width: 100%;
+          table{
+            width: 96%;
+            tr{
+              width: 100%;
+              td{
+                width: 33.33%;
+                text-align: center;
+                padding: 8px;
+                .left-icon{
+                  width: 6vh;
+                  height: 6vh;
+                }
+                .mc{
+                  text-align: center;
+                  font-size: 1.5vh;
+                  margin-top: 10px;
+                }
+              }
+            }
+          }
+        }
+        .left-search-btn{
+          width: 100%;
+          height: 5.5vh;
+          text-align: center;
+          img{
+            max-height: 5vh;
+          }
+        }
+        ul{
+          width: 100%;
+          li{
+            width: 100%;
+            padding: 6px;
+            white-space: nowrap;
+            border-bottom: 1px solid #cccccc;
+            span{
+              display: inline-block;
+              font-size: 1.4vh;
+            }
+            .li-span-1{
+              width: 10%;
+              img{
+                width: 2vh;
+                position: relative;
+                top:-1vh;
+              }
+            }
+
+            .li-span-2 {
+              width: 50%;
+              div:nth-child(1){
+                color: #203296;
+              }
+            }
+
+            .li-span-3 {
+              width: 40%;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+
+  /*左侧菜单====END*/
+  /*右侧列表 === START*/
+  .map-right {
+  }
+
+  /*右侧列表 === END*/
+}
