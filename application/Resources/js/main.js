@@ -1,3 +1,4 @@
+var isfirstOpenmenu = true; // 是否是第一次点击一级菜单
 $(()=>{
 
   loadFirstMenu();
@@ -32,6 +33,12 @@ function firstMenuClick(index,obj){
     laytpl(getTpl).render(data, function (html) {
       view.innerHTML = html;
       baseElement.init('upnew');
+      if(isfirstOpenmenu){
+        setTimeout(function () {
+          $("#leftMenu_View").find(".layui-nav-item").eq(0).click();
+        }, 500)
+        isfirstOpenmenu = false;
+      }
     });
   });
 }
