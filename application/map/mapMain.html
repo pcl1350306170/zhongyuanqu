@@ -6,6 +6,7 @@
 </head>
 <link rel="stylesheet" href="../../Resources/js/layui/css/layui.css">
 <link rel="stylesheet" href="../../Resources/asset/main/css/style.css">
+<link rel="stylesheet" href="../../Resources/fonts/iconfont.css">
 <link rel="stylesheet" href="./Resources/css/map.css">
 <body>
 <div class="main-map">
@@ -75,6 +76,9 @@
     <!--顶部横条 ==== END-->
     <!--左侧菜单====START-->
     <div class="map-left div-1">
+        <div class="menu-show-hide" onclick="showOrhideMenu()">
+            <img src="../Resources/img/menu-hide.png" alt="">
+        </div>
         <div class="left-1 left-div">
             <div class="left-title">
                 <span class="left-search-icon">
@@ -82,7 +86,7 @@
                 </span>
                 <span>区域检索</span>
                 <span class="left-updown-icon">
-                    <img src="./Resources/image/up.png" alt="">
+                    <img src="./Resources/image/up.png" alt="" onclick="showORhide_left1(this)">
                 </span>
             </div>
             <div class="left-content">
@@ -107,11 +111,12 @@
                     </span>
                 <span>类型检索</span>
                 <span class="left-updown-icon">
-                        <img src="./Resources/image/up.png" alt="">
+                        <img src="./Resources/image/up.png" alt="" onclick="showORhide_left2(this)">
                     </span>
             </div>
             <div class="left-content">
-                <div class="gongge-table">
+                <span class="all-dom">
+                    <div class="gongge-table">
                     <table>
                         <tr>
                             <td>
@@ -170,6 +175,8 @@
                 <div class="left-search-btn">
                     <img src="./Resources/image/left-search-btn.png" alt="">
                 </div>
+                </span>
+
             </div>
         </div>
         <div class="left-3 left-div">
@@ -179,11 +186,43 @@
                     </span>
                 <span>检索结果</span>
                 <span class="left-updown-icon">
-                        <img src="./Resources/image/up.png" alt="">
+                        <img src="./Resources/image/up.png" alt="" onclick="showORhide_left3(this)">
                 </span>
             </div>
             <div class="left-content">
                 <ul>
+                    <li>
+                        <span class="li-span-1">
+                            <img src="./Resources/image/left-dian.png" alt="">
+                        </span>
+                        <span class="li-span-2">
+                            <div>
+                                迎国庆安全防护排查银行。。。
+                            </div>
+                            <div>
+                                社区2第七网格
+                            </div>
+                        </span>
+                        <span class="li-span-3">
+                            2019-10-12
+                        </span>
+                    </li>
+                    <li>
+                        <span class="li-span-1">
+                            <img src="./Resources/image/left-dian.png" alt="">
+                        </span>
+                        <span class="li-span-2">
+                            <div>
+                                迎国庆安全防护排查银行。。。
+                            </div>
+                            <div>
+                                社区2第七网格
+                            </div>
+                        </span>
+                        <span class="li-span-3">
+                            2019-10-12
+                        </span>
+                    </li>
                     <li>
                         <span class="li-span-1">
                             <img src="./Resources/image/left-dian.png" alt="">
@@ -238,11 +277,78 @@
     </div>
     <!--左侧菜单====END-->
     <!--右侧列表 === START-->
-    <div class="map-right div-1"></div>
+    <div class="map-right div-1">
+        <div class="menu-show-hide" onclick="showOrhideRightTable()">
+            <img src="../Resources/img/menu-show.png" alt="">
+        </div>
+        <div class="right-title">
+                <span class="right-search-icon">
+                    <img src="./Resources/image/right-title.png" alt="">
+                </span>
+            <span>区域检索</span>
+        </div>
+        <div class="div-2">
+            <span class="r-icon">
+                <img src="./Resources/image/icons/top-5.png" alt="">
+            </span>
+            <span class="wz">
+              总人数：500
+            </span>
+            <span class="r-icon">
+                <img src="./Resources/image/icons/top-8.png" alt="">
+            </span>
+            <span class="wz">
+              在岗人数：500
+            </span>
+        </div>
+        <div class="div-3">
+            <span class="right-input">
+                <input type="text" placeholder="轨迹/时间">
+                <img src="./Resources/image/left-map-s.png" alt="" class="input-icon">
+            </span>
+            <span class="right-input">
+                <input type="text" placeholder="姓名/电话">
+                <img src="./Resources/image/left-map-s.png" alt="" class="input-icon">
+            </span>
+        </div>
+        <div class="div-4 div-right-table">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>姓名</th>
+                    <th>所属社区</th>
+                    <th>所属网格</th>
+                    <th>轨迹</th>
+                </tr>
+                </thead>
+                <tbody id="rightTable_View"></tbody>
+            </table>
+        </div>
+        <div class="div-5" id="rightTablelaypage"></div>
+    </div>
     <!--右侧列表 === END-->
 </div>
 </body>
 <script src="../../Resources/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../../Resources/js/jquery/jquery.nicescroll.js"></script>
 <script src="../../Resources/js/layui/layui.all.js"></script>
 <script src="./Resources/js/map.js"></script>
+<script src="./Resources/js/rightlist.js"></script>
+<!--右侧列表模板-->
+<script id="rightTable_demo" type="text/html">
+    {{# layui.each(d, function(index, item){ }}
+    <tr>
+        <td>
+            <img src="./Resources/image/left-dian.png" alt="" class="icon-right-table">
+        </td>
+        <td>{{item.name}}</td>
+        <td>{{item.shequ}}</td>
+        <td>{{item.wangge}}</td>
+        <td>
+            <button type="button" class="layui-btn layui-btn-normal  layui-btn-xs">回放</button>
+        </td>
+    </tr>
+    {{# }); }}
+</script>
 </html>
