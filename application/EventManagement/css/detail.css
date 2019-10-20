@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/*详情页*/
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f7f9; }
+
+.detail-dom {
+  width: 100%;
+  height: 100%;
+  /*信息 === START*/
+  /*信息 === END*/
+  /*记录 == == START*/
+  /*记录 == == END*/ }
+  .detail-dom .detail-info {
+    width: 96%;
+    min-height: 36vh;
+    margin: 0 auto;
+    padding: 5px 2vh; }
+    .detail-dom .detail-info .info {
+      width: 100%;
+      height: 100%; }
+      .detail-dom .detail-info .info .info-info {
+        width: 45%;
+        height: 100%;
+        float: left; }
+        .detail-dom .detail-info .info .info-info ul {
+          width: 100%; }
+          .detail-dom .detail-info .info .info-info ul li {
+            padding: 1vh;
+            line-height: 3vh; }
+            .detail-dom .detail-info .info .info-info ul li span {
+              font-size: 2vh;
+              padding: 0.6vh; }
+            .detail-dom .detail-info .info .info-info ul li span:nth-child(1) {
+              color: #0097de; }
+            .detail-dom .detail-info .info .info-info ul li span:nth-child(2) {
+              color: #333333; }
+      .detail-dom .detail-info .info .info-map {
+        border: 1px solid #00a5e3;
+        width: 50%;
+        height: 35vh;
+        float: right;
+        margin-right: 3vh;
+        border-radius: 13px; }
+  .detail-dom .info-files {
+    width: 96%;
+    margin: 2vh auto; }
+    .detail-dom .info-files .file-down {
+      display: inline-block;
+      width: 24.4%;
+      height: 25vh;
+      margin-top: 10px;
+      text-align: center; }
+      .detail-dom .info-files .file-down .imgfile img {
+        width: 90%;
+        height: 23vh;
+        border-radius: 12px; }
+      .detail-dom .info-files .file-down .filename {
+        margin-top: 10px;
+        color: #203296;
+        font-size: 2.3vh; }
+        .detail-dom .info-files .file-down .filename i {
+          cursor: pointer;
+          font-size: 2.8vh; }
+  .detail-dom .detail-jilu {
+    width: 100%;
+    overflow: hidden; }
+    .detail-dom .detail-jilu .jilu-title {
+      width: 96%;
+      height: 6.5vh;
+      background-color: #dcedfe;
+      color: #0097de;
+      line-height: 6.5vh;
+      padding: 0 3vh; }
+    .detail-dom .detail-jilu .jl {
+      width: 100%;
+      min-height: 50vh; }
+      .detail-dom .detail-jilu .jl .cd-timeline-img.cd-picture {
+        background-color: #0097de; }
+      .detail-dom .detail-jilu .jl .timelint-title {
+        background-color: #0097de;
+        height: 6vh;
+        line-height: 6vh;
+        padding: 0 2.5vh;
+        color: #ffffff;
+        font-size: 2.6vh;
+        border-radius: 3px; }
+        .detail-dom .detail-jilu .jl .timelint-title .sort {
+          font-size: 3vh;
+          font-style: oblique; }
+      .detail-dom .detail-jilu .jl .timelint-nr {
+        padding: 0 2.5vh; }
+        .detail-dom .detail-jilu .jl .timelint-nr .timelint-div {
+          display: inline-block;
+          min-height: 25vh; }
+        .detail-dom .detail-jilu .jl .timelint-nr .timelint-nr-info {
+          width: 50%; }
+          .detail-dom .detail-jilu .jl .timelint-nr .timelint-nr-info ul li {
+            padding: 3px 0; }
+            .detail-dom .detail-jilu .jl .timelint-nr .timelint-nr-info ul li span {
+              font-size: 2.1vh; }
+            .detail-dom .detail-jilu .jl .timelint-nr .timelint-nr-info ul li span:nth-child(1) {
+              color: #0097de; }
+            .detail-dom .detail-jilu .jl .timelint-nr .timelint-nr-info ul li span:nth-child(2) {
+              color: #333333; }
+        .detail-dom .detail-jilu .jl .timelint-nr .timelint-nr-file {
+          width: 47%;
+          float: right;
+          padding: 15px 5px; }
+          .detail-dom .detail-jilu .jl .timelint-nr .timelint-nr-file img {
+            width: 100%;
+            height: 20vh; }
+
+/*# sourceMappingURL=detail.css.map */

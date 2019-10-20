@@ -1,0 +1,155 @@
+@charset "utf-8";
+/*详情页*/
+body,html{
+  width: 100%;
+  height: 100%;
+  background-color: #f5f7f9;
+}
+.detail-dom{
+  width: 100%;
+  height: 100%;
+  /*信息 === START*/
+  .detail-info{
+    width: 96%;
+    min-height: 36vh;
+    margin: 0 auto;
+    padding: 5px 2vh;
+    .info{
+      width: 100%;
+      height: 100%;
+      .info-info{
+        width: 45%;
+        height: 100%;
+        float: left;
+        ul{
+          width: 100%;
+          li{
+            padding: 1vh;
+            line-height: 3vh;
+            span{
+              font-size: 2vh;
+              padding: 0.6vh;
+            }
+            span:nth-child(1){
+              color: #0097de;
+            }
+
+            span:nth-child(2) {
+              color: #333333;
+            }
+          }
+        }
+      }
+      .info-map{
+        border: 1px solid #00a5e3;
+        width: 50%;
+        height: 35vh;
+        float: right;
+        margin-right: 3vh;
+        border-radius: 13px;
+      }
+    }
+  }
+
+  .info-files {
+    width: 96%;
+    margin: 2vh auto;
+
+    .file-down {
+      display: inline-block;
+      width: 24.4%;
+      height: 25vh;
+      margin-top: 10px;
+      text-align: center;
+      .imgfile{
+        img{
+          width: 90%;
+          height: 23vh;
+          border-radius: 12px;
+        }
+      }
+      .filename{
+        margin-top: 10px;
+        color:#203296;
+        font-size: 2.3vh;
+        i{
+          cursor: pointer;
+          font-size: 2.8vh;
+        }
+      }
+    }
+  }
+  /*信息 === END*/
+  /*记录 == == START*/
+  .detail-jilu{
+    width: 100%;
+    overflow: hidden;
+    .jilu-title{
+      width: 96%;
+      height: 6.5vh;
+      background-color: #dcedfe;
+      color: #0097de;
+      line-height: 6.5vh;
+      padding: 0 3vh;
+    }
+    .jl{
+      width: 100%;
+      min-height: 50vh;
+
+      .cd-timeline-img.cd-picture{
+        background-color: #0097de;
+      }
+      .timelint-title{
+        background-color: #0097de;
+        height: 6vh;
+        line-height: 6vh;
+        padding: 0 2.5vh;
+        color:#ffffff;
+        font-size: 2.6vh;
+        border-radius: 3px;
+        .sort{
+          font-size: 3vh;
+          font-style: oblique
+        }
+      }
+      .timelint-nr{
+        padding: 0 2.5vh;
+        .timelint-div{
+          display: inline-block;
+          min-height: 25vh;
+        }
+        .timelint-nr-info{
+          width: 50%;
+          ul {
+            li {
+              padding: 3px 0;
+
+              span {
+                font-size: 2.1vh;
+              }
+
+              span:nth-child(1) {
+                color: #0097de;
+              }
+
+              span:nth-child(2) {
+                color: #333333;
+              }
+            }
+          }
+        }
+        .timelint-nr-file{
+          width: 47%;
+          float: right;
+          padding: 15px 5px;
+          img{
+            width: 100%;
+            height: 20vh;
+          }
+        }
+
+      }
+    }
+  }
+  /*记录 == == END*/
+}

@@ -41,6 +41,13 @@
       "unicode_decimal": 58900
     },
     {
+      "icon_id": "2958959",
+      "name": "事件管理",
+      "font_class": "shijianguanli",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
       "icon_id": "2959070",
       "name": "人员类型",
       "font_class": "renyuanleixing",
@@ -104,6 +111,13 @@
       "unicode_decimal": 59211
     },
     {
+      "icon_id": "7325991",
+      "name": "编辑_",
+      "font_class": "bianji_",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
       "icon_id": "7550210",
       "name": "添加",
       "font_class": "tianjia",
@@ -130,6 +144,13 @@
       "font_class": "MBEfenggechangyongtubiao-shangchuan",
       "unicode": "e61e",
       "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "9592598",
+      "name": "HTSCIT_下载",
+      "font_class": "xiazai",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
     },
     {
       "icon_id": "10088950",

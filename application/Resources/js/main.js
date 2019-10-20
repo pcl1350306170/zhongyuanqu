@@ -111,3 +111,25 @@ function refreshAction(){
     $(".layui-nav-item-iframeAction-actiion").hide(120);
   })
 }
+
+function showWin(){
+  var that = this;
+  //多窗口模式，层叠置顶
+  let h = './EventManagement/detail.html'
+  layer.open({
+    type: 2 //此处以iframe举例
+    , title: '<span><i class="iconfont icon-shijianguanli"></i>事件信息</span>'
+    , area: ['50%','80%']
+    , shade: 0.3
+    , maxmin: true
+    , content: h
+    , btn: ['关闭']
+    , yes: function (index, layero) {
+      layer.close(index);
+    }
+    , zIndex: layer.zIndex //重点1
+    , success: function (layero) {
+      layer.setTop(layero); //重点2
+    }
+  })
+}
