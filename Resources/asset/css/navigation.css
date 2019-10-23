@@ -78,6 +78,32 @@ body {
     position: absolute;
     top:13%;
     left: 11%;
+    z-index: 8;
+    cursor: pointer;
+}
+
+.center-lou{
+    position: absolute;
+    width: 56%;
+    height: 50%;
+    top: 40%;
+    left: 22%;
+    background-image: url("../../images/navigationbj-l.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: dropcenterloudown 5s linear infinite;
+}
+
+@keyframes dropcenterloudown {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
 }
 
 .div-body .center .models{
@@ -87,12 +113,22 @@ body {
     background-repeat: no-repeat;
     min-width: 10%;
     height: 10%;
-    color:#ffffff;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.6em;
     text-align: center;
     line-height: 5vh;
     padding: 15px;
     white-space: nowrap;
+    transition: .8s all ease-in-out;
+}
+
+.div-body .center .models:hover{
+    line-height: 4.8vh;
+    padding: 20px;
+    height: 11%;
+    min-width: 11%;
+    font-size: 1.8em;
+    color:#ffffff;
 }
 
 /*网格管理*/

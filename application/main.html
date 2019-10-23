@@ -53,7 +53,7 @@
     </ul>
   </div>
   <!--顶部导航 === END-->
-  <div style="display: none;">
+  <div style="">
     <!--点击显示或者隐藏左侧菜单====START-->
     <div class="menu-show-hide" onclick="showOrhideMenu()">
       <img src="./Resources/img/menu-hide.png" alt="">
@@ -68,7 +68,7 @@
 
     <!--中心内容区域 === START-->
     <div class="layui-body admin-content s-main main-centers">
-      <div class="layui-nav-item-iframeAction" onclick="showOrhideAction()">
+      <!--<div class="layui-nav-item-iframeAction" onclick="showOrhideAction()">
         <i class="fa fa-chevron-down"></i>
       </div>
       <div class="layui-nav-item-iframeAction-actiion">
@@ -79,11 +79,11 @@
           <li class="kit-line"></li>
           <li class="kit-item" data-target="closeAll">关闭所有选项卡</li>
         </ul>
-      </div>
+      </div>-->
       <!-- 内容主体区域 -->
       <div class="layui-tab layui-tab-card site-demo-title" lay-filter="s-tab" lay-allowclose="true">
         <div class="x-slide_left"></div>
-        <ul class="layui-tab-title">
+        <ul class="layui-tab-title" style="display: none;">
           <li class="layui-this home">
             我的桌面
             <i class="layui-icon layui-unselect layui-tab-close">ဆ</i>
@@ -101,7 +101,7 @@
 
   </div>
 
-  <div class="main-iframe" style="">
+  <div class="main-iframe" style="display: none;">
     <iframe frameborder="0" src="./map/mapMain.html"></iframe>
   </div>
 

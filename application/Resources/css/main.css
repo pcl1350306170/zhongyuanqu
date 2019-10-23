@@ -105,16 +105,22 @@ body,html{
 .left-menu .layui-nav-tree .layui-nav-item a{
     color: #333333;
 }
+
+.left-menu .layui-nav-tree .layui-this a{
+    color:#ffffff;
+}
 .left-menu .layui-nav-tree .layui-nav-item a:hover {
-    background-image: linear-gradient(to top, #0db9f1, #6cfcf8);
+    background-image: linear-gradient(to top, #235adf, #11c2f1);
 }
 
 .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover {
-    background-image: linear-gradient(to top, #0db9f1, #6cfcf8);
+    background-image: linear-gradient(to top, #235adf, #11c2f1);
+    color: #ffffff;
 }
 
 .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover {
-    background-image: linear-gradient(to top, #0db9f1, #6cfcf8);
+    background-image: linear-gradient(to top, #235adf, #11c2f1);
+    color: #ffffff;
 }
 
 .left-menu .layui-nav-itemed{

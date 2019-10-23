@@ -17,6 +17,10 @@ var baseElement= {
 
       //监听导航点击
       element.on('nav', function (elem) {
+        url = elem.find('a').attr('_href');
+        $('.s-iframe').attr('src', url);
+
+        return;
         title = elem.find('cite').text();
         if (title == '') return;
 
